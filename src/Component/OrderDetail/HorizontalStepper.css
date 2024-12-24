@@ -1,0 +1,54 @@
+/* 其他樣式保持不變 */
+.horizontal-stepper {
+  display: flex;
+  flex-direction: row; /* 預設為水平排列 */
+  flex-wrap: wrap; /* 當不夠寬時換行 */
+}
+.custom-row {
+  /* --bs-gutter-x: 0 rem; 減少水平間距 */
+  margin-top: 10px;
+}
+@media (min-width: 768px) {
+  .horizontal-stepper {
+    flex-direction: row;
+    flex-wrap: wrap; /* 當不夠寬時換行 */
+  }
+
+  .stepper-wrapper {
+    margin-right: 20px;
+  }
+}
+
+/* 工作日誌樣式調整 */
+.date-container {
+  background-color: #F5F5F5; /* 與 Node 的背景顏色一致 */
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  /* margin-bottom: 10px; */
+  border: 5px solid #BD8162; /* 與 Node 一致的邊框顏色 */
+  overflow-x: auto; /* 允許水平滾動 */
+  font-size: 1.25rem; /* 新增的字體大小，與 .node 一致 */
+}
+
+.date-container h3 {
+  font-size: 20px; /* 調整標題字體大小 */
+  margin-bottom: 10px; /* 增加底部間距 */
+  color: #5D4037; /* 與 Node 標題顏色一致 */
+}
+
+.date-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.date-container li {
+  font-size: 18px; /* 調整項目字體大小 */
+  margin-bottom: 5px; /* 增加底部間距 */
+  border-bottom: 1px solid #8F8681; /* 添加底部分隔邊界 */
+  color: #5D4037; /* 與 Node 文字顏色保持一致 */
+}
+
+.date-container li:last-child {
+  border-bottom: none; /* 最後一個項目去除底部分隔邊界 */
+}

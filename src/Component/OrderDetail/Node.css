@@ -1,0 +1,68 @@
+.node {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: 5px solid #BD8162; /* 與 .card 一致的邊框顏色和寬度 */
+  margin-top: 10px;
+  border-radius: 10px; /* 與 .card 一致的圓角半徑 */
+  background-color: #f9f9f9; /* 基本背景顏色 */
+  font-size: 1.25rem; /* 新增的字體大小 */
+}
+
+/* 手機版取消 margin-right */
+@media (max-width: 576px) {
+  .node {
+    margin-right: 0; /* 在手機版上取消 margin-right */
+  }
+}
+
+/* 父級為 light 時，node 背景稍微偏亮 */
+.node.light {
+  background-color: #F6E9D8; /* 比較亮的背景色 */
+  border-color: #D4A374; /* 更柔和的邊框顏色 */
+}
+
+/* 父級為 dark 時，node 背景稍微偏暗 */
+.node.dark {
+  background-color: #D1B09E; /* 比較暗的背景色 */
+  border-color: #8B7D6B; /* 更深的邊框顏色 */
+}
+
+.node-content {
+  flex: 7; /* 左邊方框佔比 7 */
+}
+
+.node-title {
+  flex: 3; /* 右邊方框佔比 3 */
+}
+
+.node h2 {
+  margin-bottom: 10px;
+}
+
+.node ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.node li {
+  padding: 5px;
+}
+
+/* 當父級為 light 時，light 顯示正常，dark 被淡化 */
+.node.light .light {
+  background-color: #F0E5CF; /* 正常顯示 */
+  color: #5D4037;
+}
+
+.node.light .dark {
+  background-color: #E0D5B5; /* 被淡化的深色 */
+  color: #8B7D6B; /* 被淡化的字體顏色 */
+}
+
+/* 當父級為 dark 時，light 和 dark 都被淡化 */
+.node.dark .light,
+.node.dark .dark {
+  background-color: #8B7D6B; /* 淡化的背景色 */
+  color: #C5BAA0; /* 更淡的字體顏色 */
+}

@@ -1,0 +1,76 @@
+.card {
+  border: 5px solid #BD8162;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+.card-header {
+  background-color: #BD8162;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+  font-size: 1.5rem; /* 調整字體大小 */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.card-header i {
+  margin-right: 10px;
+}
+
+.card-body {
+  padding: 20px;
+  font-size: 1.25rem; /* 增大字體 */
+  line-height: 1.6;
+}
+
+.order-info {
+  display: flex;
+  justify-content: space-between; /* 將兩個列對齊到左右兩邊 */
+}
+
+.info-column {
+  flex: 1;
+  padding: 10px;
+}
+
+.info-item {
+  margin-bottom: 15px; /* 增加每個項目之間的間距 */
+  display: flex;
+  align-items: center;
+}
+
+.info-item i {
+  margin-right: 10px;
+  color: #BD8162;
+}
+
+.info-item strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.card-body .btn {
+  background-color: #BD8162;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.25rem; /* 調整按鈕字體大小 */
+}
+
+.card-body .btn i {
+  margin-right: 8px;
+}
+
+.card-body .btn:hover {
+  background-color: #A46B4D;
+}

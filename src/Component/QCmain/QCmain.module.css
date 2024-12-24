@@ -1,0 +1,157 @@
+/* 新增的外部包裹容器 */
+.outerBox {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 從 center 改為 flex-start，讓內容靠上 */
+    height: calc(100vh - 40px); /* 確保填滿視窗高度，同時考慮到 padding */
+    background-color: #e0e0e0; /* 背景色，可以根據需求調整 */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto; /* 添加垂直滾動，僅在需要時出現 */
+}
+
+/* 原有的容器調整 */
+.container {
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    border-radius: 15px; /* 圓角 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 陰影效果，增加立體感 */
+    padding: 20px; /* 減少 padding */
+    max-width: 800px; /* 根據內容調整寬度 */
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.outerBox:hover .container {
+    transform: translateY(-5px); /* 當滑鼠懸停時，稍微上浮 */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* 增加陰影以強調立體感 */
+}
+
+/* 標題樣式 */
+.title {
+    margin-bottom: 15px; /* 減少 margin */
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center; /* 置中標題 */
+}
+
+/* flex容器 */
+.flexContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto; /* 置中 flex 容器 */
+}
+
+/* 左側容器 */
+.leftContainer {
+    flex: 1;
+}
+
+/* 右側容器 */
+.rightContainer {
+    flex: 1;
+    margin-left: 20px;
+}
+
+/* 其他樣式保持不變 */
+.inputGroup {
+    margin-bottom: 15px;
+}
+
+.label {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+    display: block;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.listbox {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.listItem {
+    padding: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #28a745; /* 綠色背景 */
+    color: white; /* 白色文字 */
+    border: none; /* 移除邊框 */
+}
+
+.listItem:hover {
+    background-color: #98ee87; /* 灰色 hover 效果 */
+    color: black; /* 黑色文字 */
+}
+
+.listItem:focus,
+.listItem:active {
+    background-color: #28a745; /* 保持選中狀態的背景 */
+    color: white; /* 保持白色文字 */
+    outline: none; /* 移除默認的 outline */
+}
+
+.standardValue {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* 錯誤訊息 */
+.errorMessage {
+    color: red;
+    font-weight: bold;
+    text-align: center; /* 置中錯誤訊息 */
+}
+
+/* 成功訊息 */
+.successMessage {
+    color: green;
+    margin-top: 10px;
+    text-align: center; /* 置中成功訊息 */
+}
+
+/* 儲存按鈕容器 */
+.saveButtonContainer {
+    margin-top: 15px; /* 減少 margin */
+    text-align: center; /* 置中按鈕 */
+}
+
+/* 儲存按鈕樣式 */
+.saveButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* 圓角按鈕 */
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.saveButton:hover {
+    background-color: #45a049;
+}
